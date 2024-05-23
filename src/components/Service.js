@@ -59,6 +59,7 @@ export default function Service() {
           <Card card={card} />
         ))}
       </div>
+      <button className="btn btn--1">Learn more</button>
     </section>
   );
 }

@@ -194,12 +194,22 @@ a:visited {
   outline: 0;
 }
 
+.btn--1 {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
 .btn:hover {
   cursor: pointer;
   background: var(--color-primary-light);
   transform: scale(1.01);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
   transition: all 1s;
+}
+
+.btn--1:hover {
+  background: transparent;
 }
 
 .btn:active {
