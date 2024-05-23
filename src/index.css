@@ -161,13 +161,20 @@ h2 {
 h2::after {
   content: "";
   position: absolute;
-  left: 50%;
   bottom: -2rem;
-  transform: translateX(-50%);
 
   width: 26%;
   height: 2px;
   background: rgb(0, 0, 0);
+}
+
+.header-sec-1::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-sec-2::after {
+  left: 0;
 }
 
 h3 {

@@ -46,7 +46,7 @@ const cards = [
 export default function Service() {
   return (
     <section className="section section-service">
-      <h2>Our services</h2>
+      <h2 className="header-sec-1">Our services</h2>
       <p>
         We provide to you the best choiches for you. Adjust it to your health
         needs and make sure your undergo treatment with our highly qualified
