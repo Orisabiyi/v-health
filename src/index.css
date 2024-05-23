@@ -111,9 +111,11 @@ body {
 
 .section {
   padding: var(--padding);
+  color: var(--color-text-gray);
 
   display: flex;
   align-items: center;
+  gap: var(--flex-parent-gap);
 }
 
 .service__card {
@@ -132,7 +134,10 @@ body {
 
 .section-service {
   flex-direction: column;
-  gap: var(--flex-parent-gap);
+}
+
+.section-download h2 {
+  width: 75%;
 }
 
 .section-service > p {
@@ -141,10 +146,6 @@ body {
 
 .section-service p {
   color: var(--color-text-gray);
-}
-
-.section-provider {
-  gap: var(--flex-parent-gap);
 }
 
 .section__img,
@@ -181,6 +182,7 @@ h2 {
   position: relative;
   font-size: 3.6rem;
   font-weight: 700;
+  color: #000;
 }
 
 h2::after {
@@ -205,6 +207,7 @@ h2::after {
 
 h3 {
   font-size: 2.4rem;
+  color: #000;
 }
 
 a:link,
