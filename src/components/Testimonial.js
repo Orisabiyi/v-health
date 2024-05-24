@@ -37,7 +37,7 @@ export default function Testimonial() {
   return (
     <section className="section section-testimonial">
       <div className="testimonial__container">
-        <h2>What our customer are saying</h2>
+        <h2 className="header-sec-1">What our customer are saying</h2>
         Testimonial Container
       </div>
     </section>
