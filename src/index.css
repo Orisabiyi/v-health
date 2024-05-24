@@ -136,6 +136,10 @@ body {
   flex-direction: column;
 }
 
+.section-testimonial {
+  justify-content: center;
+}
+
 .section-download h2 {
   width: 75%;
 }
