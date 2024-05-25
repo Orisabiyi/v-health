@@ -1,3 +1,6 @@
+import { useState } from "react";
+import TestimonialCard from "./TestimonialCard";
+
 const testimonials = [
   {
     id: 1,
@@ -9,7 +12,7 @@ const testimonials = [
   },
   {
     id: 2,
-    image: "images/patient-avatar.png",
+    image: "images/user-avatar.png",
     username: "Emma Johnson",
     user_job: "Patient",
     testimonial:
@@ -17,7 +20,7 @@ const testimonials = [
   },
   {
     id: 3,
-    image: "images/doctor-avatar.png",
+    image: "images/user-avatar.png",
     username: "Dr. Alex Nguyen",
     user_job: "Primary Care Physician",
     testimonial:
@@ -25,7 +28,7 @@ const testimonials = [
   },
   {
     id: 4,
-    image: "images/admin-avatar.png",
+    image: "images/user-avatar.png",
     username: "Rachel Smith",
     user_job: "Healthcare Administrator",
     testimonial:
@@ -34,11 +37,38 @@ const testimonials = [
 ];
 
 export default function Testimonial() {
+  const [curIndex, setCurIndex] = useState(0);
+
+  function handleNextSlide() {
+    setCurIndex((index) => (index < testimonials.length - 1 ? index + 1 : 0));
+  }
+
+  function handlePrevSlide() {
+    setCurIndex((index) => (index > 0 ? index - 1 : testimonials.length - 1));
+  }
+
   return (
     <section className="section section-testimonial">
       <div className="testimonial__container">
         <h2 className="header-sec-1">What our customer are saying</h2>
-        Testimonial Container
+        <div>
+          {testimonials.map((testimonial, i) => (
+            <TestimonialCard
+              key={testimonial.id}
+              index={i}
+              curIndex={curIndex}
+              testimonial={testimonial}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="testimonial__btn">
+        <button onClick={handlePrevSlide} disabled={curIndex ? false : true}>
+          &larr;
+        </button>
+
+        <button onClick={handleNextSlide}>&rarr;</button>
       </div>
     </section>
   );
