@@ -1,8 +1,8 @@
 export default function Nav() {
   return (
     <nav className="nav">
-      <div className="nav__logo">
-        <figure className="nav__figure">T</figure>
+      <div className="logo">
+        <figure className="figure">T</figure>
         <h3>Trafalgar</h3>
       </div>
 
