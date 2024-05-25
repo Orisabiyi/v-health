@@ -1,3 +1,4 @@
+import Article from "./Article";
 import Download from "./Download";
 import Header from "./Header";
 import Provider from "./Provider";
@@ -12,6 +13,7 @@ export default function App() {
       <Provider />
       <Download />
       <Testimonial />
+      <Article />
     </div>
   );
 }

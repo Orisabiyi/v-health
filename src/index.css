@@ -7,7 +7,7 @@
     #5a98f2 76.74%
   );
   --color-primary: #458ff6;
-  --color-primary-light: #458ff6cf;
+  --color-primary-light: #458ff6b7;
   --color-primary-dark: #233348;
   --color-primary-dark-2: #1f1534;
 
@@ -144,6 +144,7 @@ body {
 .section-testimonial {
   justify-content: center;
   flex-direction: column;
+  gap: 3rem;
 }
 
 .section-download h2 {
@@ -195,6 +196,19 @@ body {
   gap: 6rem;
 }
 
+.testimonial__container h2,
+.testimonial__container h3 {
+  color: var(--color-neutral);
+}
+
+.testimonial__container h2::after {
+  background-color: var(--color-neutral);
+}
+
+.testimonial__container h3 {
+  font-size: 2.2rem;
+}
+
 .testimonial__container > div {
   position: relative;
   overflow: hidden;
@@ -209,6 +223,7 @@ body {
 
   left: 0;
   top: 0;
+  color: var(--color-neutral);
 
   display: flex;
   justify-content: center;
@@ -239,6 +254,28 @@ body {
 .testimonial__profile,
 .testimonial__content {
   flex: 1;
+}
+
+.testimonial__btn {
+  flex: 0 0 auto;
+  width: 30%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial__btn button {
+  border: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.testimonial__btn button:disabled {
+  color: var(--color-primary-light);
+  cursor: not-allowed;
 }
 
 h1 {
@@ -276,10 +313,6 @@ h2::after {
 h3 {
   font-size: 2.4rem;
   color: #000;
-}
-
-h3 {
-  font-size: 2.2rem;
 }
 
 a:link,
