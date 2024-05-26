@@ -14,7 +14,7 @@
   --color-text-gray: #7d7987;
   --color-neutral: #ffffff;
 
-  --padding: 7rem 15rem;
+  --padding: 4rem 15rem;
   --flex-parent-gap: 8rem;
 }
 
@@ -40,6 +40,8 @@ body {
 
 .header {
   padding: var(--padding);
+  width: 100%;
+  min-height: 100vh;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -54,30 +56,6 @@ body {
 
 .nav .logo {
   margin-right: auto;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.figure {
-  font-size: 2.6rem;
-  font-weight: 700;
-
-  width: 3.5rem;
-  height: 3.5rem;
-  padding: 2rem;
-  border-radius: 100%;
-  color: var(--color-neutral);
-  background-color: var(--color-primary);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 0;
 }
 
 .nav__list {
@@ -111,7 +89,6 @@ body {
 
 .header__img img {
   display: block;
-  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -310,6 +287,38 @@ body {
   cursor: not-allowed;
 }
 
+.footer {
+  display: grid;
+  grid-template-columns: 30% repeat(3, 1fr);
+  align-items: start;
+  gap: var(--flex-parent-gap);
+
+  padding: 7rem 15rem;
+  background: var(--color-primary-gradient);
+  color: var(--color-neutral);
+}
+
+.footer h3 {
+  color: var(--color-neutral);
+}
+
+.footer__info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer__list {
+  list-style: none;
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 h1 {
   font-size: 4.8rem;
   font-weight: 700;
@@ -347,11 +356,44 @@ h3 {
   color: #000;
 }
 
+h4 {
+  font-size: 2rem;
+}
+
 a:link,
 a:visited {
   display: inline-block;
   text-decoration: none;
   color: unset;
+}
+
+a:hover {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.figure {
+  font-size: 2.6rem;
+  font-weight: 700;
+
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 2rem;
+  border-radius: 100%;
+  color: var(--color-neutral);
+  background-color: var(--color-primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
 }
 
 .btn {
@@ -400,7 +442,7 @@ a:visited {
   background: var(--color-primary-light);
   transform: scale(1.01);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-  transition: all 1s;
+  transition: all 0.4s;
 }
 
 .btn--1:hover {
