@@ -21,6 +21,7 @@
 @media only screen and (max-width: 37.5em) {
   :root {
     --padding: 3rem;
+    --flex-parent-gap: 4rem;
   }
 }
 
@@ -44,6 +45,12 @@ body {
   font-style: normal;
 }
 
+@media only screen and (max-width: 37.5em) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
 .header {
   padding: var(--padding);
   width: 100%;
@@ -57,7 +64,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .header {
     grid-template-columns: 1fr;
-    gap: 5rem 0;
+    gap: 2rem 0;
   }
 }
 
@@ -115,6 +122,11 @@ body {
 @media only screen and (max-width: 37.5em) {
   .header__content {
     grid-column: 1 / 3;
+    justify-content: flex-start;
+  }
+
+  .header__content p {
+    font-size: 1.7rem;
   }
 
   .header__img {
@@ -185,8 +197,12 @@ body {
 }
 
 @media only screen and (max-width: 37.5em) {
+  .section__info {
+    gap: 2.5rem;
+  }
+
   .service__card {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -205,6 +221,7 @@ body {
   flex-direction: column;
   gap: 3rem;
 }
+
 .card__img img {
   width: 100%;
   height: 100%;
@@ -215,6 +232,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .card,
+  .card__content {
+    gap: 2rem;
+  }
 }
 
 .article__cards {
@@ -344,6 +368,22 @@ body {
   cursor: not-allowed;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .testimonial__container {
+    gap: 3rem;
+    padding: 3rem;
+  }
+
+  .testimonial__container > div {
+    width: 100%;
+    height: 30rem;
+  }
+
+  .testimonial__card {
+    flex-direction: column;
+  }
+}
+
 .footer {
   display: grid;
   grid-template-columns: 30% repeat(3, 1fr);
@@ -433,6 +473,20 @@ h3 {
 
 h4 {
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  h2::after {
+    bottom: -1rem;
+  }
 }
 
 a:link,
