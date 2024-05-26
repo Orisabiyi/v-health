@@ -18,6 +18,12 @@
   --flex-parent-gap: 8rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  :root {
+    --padding: 3rem;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -48,6 +54,13 @@ body {
   gap: 4rem 8rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 5rem 0;
+  }
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -66,6 +79,12 @@ body {
   display: flex;
   align-items: center;
   gap: 4rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav__list {
+    display: none;
+  }
 }
 
 .header__content {
@@ -93,6 +112,16 @@ body {
   height: 100%;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .header__content {
+    grid-column: 1 / 3;
+  }
+
+  .header__img {
+    grid-column: 1 / -1;
+  }
+}
+
 .section {
   padding: var(--padding);
   color: var(--color-text-gray);
@@ -100,6 +129,13 @@ body {
   display: flex;
   align-items: center;
   gap: var(--flex-parent-gap);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .section-service {
@@ -148,6 +184,12 @@ body {
   gap: 3rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .service__card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .service__card .card {
   border-radius: 2rem;
   padding: 4.5rem 3.25rem;
@@ -163,6 +205,11 @@ body {
   flex-direction: column;
   gap: 3rem;
 }
+.card__img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
 .card__content {
   display: flex;
@@ -176,8 +223,18 @@ body {
   gap: 3rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .article__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 .article__cards .card {
   border-radius: 2rem;
+}
+
+.article__cards .card__img {
+  width: 100%;
 }
 
 .article__cards .card__content {
@@ -298,6 +355,18 @@ body {
   color: var(--color-neutral);
 }
 
+@media only screen and (max-width: 37.5em) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: var(--padding);
+  }
+}
+
+.footer .figure {
+  background: var(--color-neutral);
+  color: var(--color-primary);
+}
+
 .footer h3 {
   color: var(--color-neutral);
 }
@@ -307,6 +376,12 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer__info:nth-of-type(1) {
+    grid-column: 1 / -1;
+  }
 }
 
 .footer__list {
