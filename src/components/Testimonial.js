@@ -68,7 +68,12 @@ export default function Testimonial() {
           &larr;
         </button>
 
-        <button onClick={handleNextSlide}>&rarr;</button>
+        <button
+          onClick={handleNextSlide}
+          disabled={curIndex >= testimonials.length - 1 ? true : false}
+        >
+          &rarr;
+        </button>
       </div>
     </section>
   );
