@@ -56,7 +56,7 @@ export default function Service() {
 
       <div className="service__card">
         {cards.map((card) => (
-          <Card card={card} />
+          <Card card={card} key={card.title} />
         ))}
       </div>
       <button className="btn btn--1">Learn more</button>
