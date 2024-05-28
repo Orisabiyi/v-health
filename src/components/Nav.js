@@ -3,6 +3,10 @@ import { useState } from "react";
 export default function Nav() {
   const [menu, setMenu] = useState(false);
 
+  function handleSetMenu() {
+    setMenu((menu) => !menu);
+  }
+
   return (
     <nav className="nav">
       <div className="logo">
@@ -10,7 +14,18 @@ export default function Nav() {
         <h3>Trafalgar</h3>
       </div>
 
-      <ul className="nav__list" style={menu ? { display: "block" } : {}}>
+      <ul
+        className="nav__list"
+        style={
+          menu
+            ? { visibility: "visible", transition: "all 1s" }
+            : {
+                visibility: "hidden",
+                transform: "translateX(100%)",
+                transition: "all 1s",
+              }
+        }
+      >
         <li>
           <a href="#!">Home</a>
         </li>
@@ -28,12 +43,18 @@ export default function Nav() {
         </li>
       </ul>
 
-      <div className="nav__menu" onClick={() => setMenu((menu) => !menu)}>
+      <div
+        className="nav__menu"
+        onClick={handleSetMenu}
+        style={menu ? { position: "fixed", right: "3rem" } : {}}
+      >
         <img
           src={menu ? "images/close.svg" : "images/open.png"}
           alt="menu icon"
         />
       </div>
+
+      {menu && <div className="nav__overlay" onClick={handleSetMenu}></div>}
     </nav>
   );
 }
