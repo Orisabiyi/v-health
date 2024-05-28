@@ -15,16 +15,8 @@ export default function Nav() {
       </div>
 
       <ul
-        className="nav__list"
-        style={
-          menu
-            ? { visibility: "visible", transition: "all 1s" }
-            : {
-                visibility: "hidden",
-                transform: "translateX(100%)",
-                transition: "all 1s",
-              }
-        }
+        className={`nav__list ${menu ? "show__menu" : ""}`}
+        style={menu ? { transition: "all 1s" } : {}}
       >
         <li>
           <a href="#!">Home</a>
