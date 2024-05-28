@@ -199,6 +199,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .section__info {
     gap: 2.5rem;
+    order: 1;
   }
 
   .service__card {
@@ -371,7 +372,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .testimonial__container {
     gap: 3rem;
-    padding: 3rem;
+    padding: 2.35rem;
   }
 
   .testimonial__container > div {
@@ -379,8 +380,31 @@ body {
     height: 30rem;
   }
 
+  .testimonial__container h2 {
+    text-align: center;
+  }
+
   .testimonial__card {
     flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .testimonial__card h3 {
+    font-size: 1.8rem;
+  }
+
+  .testimonial__profile {
+    flex: 0 0 auto;
+    gap: 1.5rem;
+  }
+
+  .testimonial__profile-img {
+    width: 25%;
+    height: auto;
+  }
+
+  .testimonial__btn {
+    width: 50%;
   }
 }
 
