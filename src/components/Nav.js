@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function Nav() {
+  const [menu, setMenu] = useState(false);
+
   return (
     <nav className="nav">
       <div className="logo">
@@ -23,6 +27,13 @@ export default function Nav() {
           <a href="#!">About us</a>
         </li>
       </ul>
+
+      <div className="nav__menu" onClick={() => setMenu((menu) => !menu)}>
+        <img
+          src={menu ? "images/close.svg" : "images/open.png"}
+          alt="menu icon"
+        />
+      </div>
     </nav>
   );
 }
