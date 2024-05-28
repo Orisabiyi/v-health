@@ -10,7 +10,7 @@ export default function Nav() {
         <h3>Trafalgar</h3>
       </div>
 
-      <ul className="nav__list">
+      <ul className="nav__list" style={menu ? { display: "block" } : {}}>
         <li>
           <a href="#!">Home</a>
         </li>
